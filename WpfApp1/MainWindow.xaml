@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+                Title="MainWindow" Height="450" Width="800" MinWidth="800" MinHeight="450" Style="{StaticResource DefaultWindowStyle}">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical" Margin="0,60,0,0" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <TextBlock Text="Welcome to WPF!" FontSize="24" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+                <TextBox Margin="0,0,0,20" Text="Enter text here"/>
+                <Button Content="Click Me!" Margin="0,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Center" Height="34" Width="150"/>
+                <Calendar Margin="0,0,0,20" HorizontalAlignment="Center"/>
+                <ComboBox Margin="0,0,0,20" Height="30">
+                    <ComboBoxItem Content="Option 1"/>
+                    <ComboBoxItem Content="Option 2"/>
+                    <ComboBoxItem Content="Option 3"/>
+                </ComboBox>
+                <Slider Margin="0,0,0,20" Minimum="0" Maximum="100" Value="40"/>
+                <CheckBox Content="Sample CheckBox" Margin="0,0,0,20"/>
+                <RadioButton Content="RadioButton 1" Margin="0,0,0,20"/>
+                <RadioButton Content="RadioButton 2" Margin="0,0,0,20"/>
+                <ListBox Margin="0,0,0,20" Height="200">
+                    <ListBoxItem Content="Item 1"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                </ListBox>
+                <DataGrid x:Name="SampleDataGrid" Height="300" AutoGenerateColumns="False"
+                          CanUserAddRows="False" CanUserDeleteRows="False"
+                          GridLinesVisibility="All" Margin="0,0,0,20">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="Auto"/>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                        <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

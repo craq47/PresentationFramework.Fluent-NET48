@@ -1,3 +1,14 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+    <File Path="README_uk-ua.md" />
+  </Folder>
+  <Folder Name="/Solution Items/Resources/">
+    <File Path="../../Диджитал Арт/2025/Screenshots/Знімок екрана 2025-12-25 191331.png" />
+    <File Path="../../Диджитал Арт/2025/Screenshots/Знімок екрана 2025-12-25 191351.png" />
+  </Folder>
+  <Folder Name="/Solution Items/Samples/">
+    <Project Path="WpfApp1/WpfApp1.csproj" Id="8f4f2197-0339-451e-bcbd-baed2c825818" />
+  </Folder>
   <Project Path="PresentationFramework.Fluent/PresentationFramework.Fluent.csproj" Id="9f301526-34f9-4584-acd9-572d7b7c20f7" />
 </Solution>
