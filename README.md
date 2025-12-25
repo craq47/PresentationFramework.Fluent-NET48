@@ -8,6 +8,8 @@
 
 The Fluent theme is well-known in .NET Core/10 as a modern Windows 10/11 theme with transparent elements, smooth animations, and a contemporary UI design. In the original version, many resources and styles use internal types and ComponentResourceKey, which are not supported in Framework 4.8.
 
+![Theme Preview](Resources/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-12-25%20194027.png)
+
 This port:
 
 - Brings core styles for **Window, Button, TextBox, ComboBox, Calendar, DataGrid**, and other standard controls.
