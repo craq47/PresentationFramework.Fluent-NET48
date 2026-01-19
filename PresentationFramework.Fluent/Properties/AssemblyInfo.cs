@@ -8,11 +8,11 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PresentationFramework.Fluent")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Port of Fluent Theme for Net Framework 4.8.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("MRCQ")]
 [assembly: AssemblyProduct("PresentationFramework.Fluent")]
-[assembly: AssemblyCopyright("Copyright ©  2025")]
+[assembly: AssemblyCopyright("Copyright © Craq 2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

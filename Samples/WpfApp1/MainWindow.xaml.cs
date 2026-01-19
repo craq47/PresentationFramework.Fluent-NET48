@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Dark.Net;
+using Dark.Net.Wpf;
+using PresentationFramework.Fluent;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Models;
 
 namespace WpfApp1
 {
@@ -23,6 +27,12 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+
+            new SkinManager().RegisterSkins(
+                lightThemeResources: FluentHelper.LightThemeUri,
+                darkThemeResources: FluentHelper.DarkThemeUri);
+
+            DarkNet.Instance.SetWindowThemeWpf(this, Theme.Auto);
         }
     }
 }

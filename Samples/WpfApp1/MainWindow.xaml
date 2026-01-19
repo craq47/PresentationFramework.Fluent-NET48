@@ -4,8 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:viewModels="clr-namespace:WpfApp1.ViewModels"
         mc:Ignorable="d"
-                Title="MainWindow" Height="450" Width="800" MinWidth="800" MinHeight="450" Style="{StaticResource DefaultWindowStyle}">
+        
+        Title="MainWindow" Style="{StaticResource DefaultWindowStyle}" Height="450" Width="800" MinWidth="800" MinHeight="450">
+    <Window.DataContext>
+        <viewModels:MainViewModel/>
+    </Window.DataContext>
     <Grid>
         <ScrollViewer>
             <StackPanel Orientation="Vertical" Margin="0,60,0,0" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" >
@@ -13,16 +18,16 @@
                 <TextBox Margin="0,0,0,20" Text="Enter text here"/>
                 <Button Content="Click Me!" Margin="0,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Center" Height="34" Width="150"/>
                 <Calendar Margin="0,0,0,20" HorizontalAlignment="Center"/>
-                <ComboBox Margin="0,0,0,20" Height="30">
+                <ComboBox Margin="0,0,0,20" Height="30" SelectedIndex="0">
                     <ComboBoxItem Content="Option 1"/>
                     <ComboBoxItem Content="Option 2"/>
                     <ComboBoxItem Content="Option 3"/>
                 </ComboBox>
                 <Slider Margin="0,0,0,20" Minimum="0" Maximum="100" Value="40"/>
-                <CheckBox Content="Sample CheckBox" Margin="0,0,0,20"/>
-                <RadioButton Content="RadioButton 1" Margin="0,0,0,20"/>
+                <CheckBox IsChecked="True" Content="Sample CheckBox" Margin="0,0,0,20"/>
+                <RadioButton IsChecked="True" Content="RadioButton 1" Margin="0,0,0,20"/>
                 <RadioButton Content="RadioButton 2" Margin="0,0,0,20"/>
-                <ListBox Margin="0,0,0,20" Height="200">
+                <ListBox Margin="0,0,0,20" Height="200" SelectedIndex="2">
                     <ListBoxItem Content="Item 1"/>
                     <ListBoxItem Content="Item 2"/>
                     <ListBoxItem Content="Item 3"/>
@@ -40,12 +45,26 @@
                     <ListBoxItem Content="Item 3"/>
                 </ListBox>
                 <DataGrid x:Name="SampleDataGrid" Height="300" AutoGenerateColumns="False"
-                          CanUserAddRows="False" CanUserDeleteRows="False"
-                          GridLinesVisibility="All" Margin="0,0,0,20">
+                        CanUserAddRows="False" CanUserDeleteRows="False"
+                        GridLinesVisibility="All" Margin="0,0,0,20"
+                        SelectedIndex="1"
+                        ItemsSource="{Binding Employees}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="Auto"/>
-                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
-                        <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="*"/>
+                        <DataGridTextColumn Header="ID" 
+                                Binding="{Binding Id}" 
+                                Width="60"/>
+                        <DataGridTextColumn Header="Full Name" 
+                                Binding="{Binding Name}" 
+                                Width="180"/>
+                        <DataGridTextColumn Header="Department" 
+                                Binding="{Binding Department}" 
+                                Width="120"/>
+                        <DataGridTextColumn Header="Salary" 
+                                Binding="{Binding Salary, StringFormat=C0}" 
+                                Width="100"/>
+                        <DataGridTextColumn Header="Hire Date" 
+                                Binding="{Binding HireDate, StringFormat=yyyy-MM-dd}" 
+                                Width="120"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

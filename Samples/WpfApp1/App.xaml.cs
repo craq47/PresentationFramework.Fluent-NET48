@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dark.Net;
+using Dark.Net.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +15,6 @@ namespace WpfApp1
     /// </summary>
     public partial class App : Application
     {
+        
     }
 }

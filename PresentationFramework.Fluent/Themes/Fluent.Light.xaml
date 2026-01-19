@@ -5927,7 +5927,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
     <Style x:Key="DefaultWindowStyle" TargetType="{x:Type Window}">
-        <Setter Property="Background" Value="White" />
+        <Setter Property="Background" Value="{DynamicResource WindowBackground}" />
         <Setter Property="Foreground" Value="{DynamicResource WindowForeground}" />
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="Template">
