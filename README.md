@@ -10,7 +10,7 @@ You can get the Nuget package at [this link](https://www.nuget.org/packages/Pres
 
 The Fluent theme is known in **.NET 9+** as the modern **Windows 11** theme, featuring transparent elements, smooth animations, and a contemporary UI design. In the original version, many resources and styles use internal types and resource components (`ComponentResourceKey`) that are not directly supported in **Net Framework 4.8**. These have been replaced with analogs or commented out (see `TODO`). This port also provides all styles separately, allowing you to combine them across different elements. 
 
-![Theme Preview](Resources/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-12-25%20194027.png)
+![Theme Preview](Resources/Screenshot1.png)
 
 #### This port:
 
@@ -25,6 +25,7 @@ The Fluent theme is known in **.NET 9+** as the modern **Windows 11** theme, fea
 - ✅ **4** themes available to choose from: `Fluent.Light`, `Fluent.Dark`, `Fluent`, and `Fluent.HC` (High Contrast). 
 - ✅ Support for **HighContrast** mode via `SystemParameters.HighContrast`.
 - ✅ Easy integration into your project:
+
 **App.xaml** — required if you plan to use the `Designer`. 
   ```xaml
   <Application.Resources>
